@@ -47,19 +47,43 @@ void show() {
 
         // Print the queue as a series of boxes, with the item in each box
         for (int i = 0; i < queue_size; i++) {
-            cout << "+-----+\t";
+            if (to_string(queue[i]).length() == 1) {
+                cout << "+-----+\t";
+            } else if (to_string(i).length() == 2) {
+                cout << "+-------+\t";
+            } else {
+                cout << "+--------+\t";
+            }
         }
         cout << endl;
         for (int i = 0; i < queue_size; i++) {
-            cout << "|  " << queue[i] << "  |\t";
+            if (to_string(queue[i]).length() == 1) {
+                cout << "|  " << queue[i] << "  |\t";
+            } else if (to_string(i).length() == 2) {
+                cout << "|  " << queue[i] << "   |\t";
+            } else {
+                cout << "|  " << queue[i] << "    |\t";
+            }
         }
         cout << endl;
         for (int i = 0; i < queue_size; i++) {
-            cout << "+-----+\t";
+            if (to_string(queue[i]).length() == 1) {
+                cout << "+-----+\t";
+            } else if (to_string(i).length() == 2) {
+                cout << "+-------+\t";
+            } else {
+                cout << "+--------+\t";
+            }
         }
         cout << endl;
         for (int i = 0; i < queue_size; i++) {
-            cout << "   " << i << "   \t";
+            if (to_string(queue[i]).length() == 1) {
+                cout << "   " << i << "   \t";
+            } else if (to_string(i).length() == 2) {
+                cout << "    " << i << "    \t";
+            } else {
+                cout << "     " << i << "     \t";
+            }
         }
         cout << endl << endl;
     }
