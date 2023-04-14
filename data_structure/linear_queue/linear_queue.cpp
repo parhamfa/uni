@@ -44,23 +44,29 @@ void show() {
             if (to_string(queue[i]).length() == 1) {
                 cout << "+-----+\t";
             } else if (to_string(i).length() == 2) {
-                cout << "+------+\t";
-            } else {
                 cout << "+-------+\t";
+            } else {
+                cout << "+--------+\t";
             }
         }
         cout << endl;
         for (int i = front+1; i <= rear; i++) {
-            cout << "|  " << queue[i] << "  |\t";
+            if (to_string(queue[i]).length() == 1) {
+                cout << "|  " << queue[i] << "  |\t";
+            } else if (to_string(i).length() == 2) {
+                cout << "|  " << queue[i] << "   |\t";
+            } else {
+                cout << "|  " << queue[i] << "    |\t";
+            }
         }
         cout << endl;
         for (int i = front+1; i <= rear; i++) {
             if (to_string(queue[i]).length() == 1) {
                 cout << "+-----+\t";
             } else if (to_string(i).length() == 2) {
-                cout << "+------+\t";
-            } else {
                 cout << "+-------+\t";
+            } else {
+                cout << "+--------+\t";
             }
         }
         cout << endl;
