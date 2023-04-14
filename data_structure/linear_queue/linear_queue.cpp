@@ -41,7 +41,13 @@ void show() {
         cout << endl << " FRONT: " << front << "\t\tREAR: " << rear << endl << endl;
         // Print the contents of the queue
         for (int i = front+1; i <= rear; i++) {
-            cout << "+-----+\t";
+            if (to_string(queue[i]).length() == 1) {
+                cout << "+-----+\t";
+            } else if (to_string(i).length() == 2) {
+                cout << "+------+\t";
+            } else {
+                cout << "+-------+\t";
+            }
         }
         cout << endl;
         for (int i = front+1; i <= rear; i++) {
@@ -49,11 +55,23 @@ void show() {
         }
         cout << endl;
         for (int i = front+1; i <= rear; i++) {
-            cout << "+-----+\t";
+            if (to_string(queue[i]).length() == 1) {
+                cout << "+-----+\t";
+            } else if (to_string(i).length() == 2) {
+                cout << "+------+\t";
+            } else {
+                cout << "+-------+\t";
+            }
         }
         cout << endl;
         for (int i = front+1; i <= rear; i++) {
-            cout << "   " << i << "   \t";
+            if (to_string(queue[i]).length() == 1) {
+                cout << "   " << i << "   \t";
+            } else if (to_string(i).length() == 2) {
+                cout << "    " << i << "    \t";
+            } else {
+                cout << "     " << i << "     \t";
+            }
         }
         cout << endl << endl;
     }
