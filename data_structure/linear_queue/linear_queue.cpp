@@ -31,19 +31,19 @@ void show() {
     } else {
         cout << endl << " FRONT: " << front << "\t\tREAR: " << rear << endl << endl;
         for (int i = front+1; i <= rear; i++) {
-            cout << "+-----+\t"; // top line of the block
+            cout << "+-----+\t";
         }
         cout << endl;
         for (int i = front+1; i <= rear; i++) {
-            cout << "|  " << queue[i] << "  |\t"; // value of the queue item
+            cout << "|  " << queue[i] << "  |\t";
         }
         cout << endl;
         for (int i = front+1; i <= rear; i++) {
-            cout << "+-----+\t"; // bottom line of the block
+            cout << "+-----+\t";
         }
         cout << endl;
         for (int i = front+1; i <= rear; i++) {
-            cout << "   " << i << "   \t"; // index of the queue item
+            cout << "   " << i << "   \t";
         }
         cout << endl << endl;
     }
